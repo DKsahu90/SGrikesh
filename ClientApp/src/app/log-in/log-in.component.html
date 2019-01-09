@@ -1,0 +1,23 @@
+<div class="container-fluid" style="max-width:500px;border:1px solid #5f5d5d;margin-top: 10%;padding: 15px;box-shadow:3px 3px 8px #9b9999;">
+  <h2>Log In</h2>
+  <p style="color: red">{{errormsg}}</p>
+  <form >
+    <div class="form-group" >
+      <label for="name">Email:</label>
+      <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email" 
+      required #username [(ngModel)]="userModel.username">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" name="pass" placeholder="Enter password" 
+      #pass [(ngModel)]="userModel.password"required>
+    </div>
+    <!-- <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div> -->
+    <button type="submit" class="btn btn-default" (click)="OnSubmit()">Submit</button>
+    <button type="submit" class="btn btn-default" (click)="onRegistar()">Register</button>
+  </form>
+</div>
+
+<!-- #userForm="ngForm" (ngSubmit)="onSubmit()" -->
